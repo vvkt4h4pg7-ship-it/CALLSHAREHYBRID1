@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleDisplayName</key>
+    <string>CALLSHARE</string>
+    <key>CFBundleIdentifier</key>
+    <string>com.ugur.j7bridge</string>
+    <key>CFBundleName</key>
+    <string>CALLSHARE</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+    <key>LSRequiresIPhoneOS</key>
+    <true/>
+    <key>NSBluetoothAlwaysUsageDescription</key>
+    <string>J7Bridge uses Bluetooth Low Energy to communicate with the IKOS K7 gateway.</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>J7Bridge uses the microphone only during an active GSM call.</string>
+    <key>NSContactsUsageDescription</key>
+    <string>J7Bridge uses Contacts to display caller names and provide a dialable contact list.</string>
+    <key>UIBackgroundModes</key>
+    <array>
+        <string>bluetooth-central</string>
+        <string>audio</string>
+    </array>
+    <key>UILaunchScreen</key>
+    <dict/>
+</dict>
+</plist>

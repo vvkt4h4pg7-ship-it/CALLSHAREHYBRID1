@@ -1,0 +1,44 @@
+﻿name: CALLSHARE Final iOS Build
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: macos-15-intel
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build OpenCORE AMR-NB for iPhoneOS arm64
+        run: |
+          bash Scripts/build_amr.sh
+
+      - name: Build unsigned iPhoneOS app
+        run: |
+          xcodebuild \
+            -project J7Bridge.xcodeproj \
+            -target J7Bridge \
+            -sdk iphoneos \
+            -configuration Release \
+            CONFIGURATION_BUILD_DIR="$PWD/build/Release-iphoneos" \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" \
+            OTHER_LDFLAGS="-L$PWD/build/opencore-amrnb -lopencore-amrnb -lc++"
+
+      - name: Package unsigned IPA
+        run: |
+          rm -rf ipa_staging
+          mkdir -p ipa_staging/Payload
+          cp -R build/Release-iphoneos/J7Bridge.app ipa_staging/Payload/
+          cd ipa_staging
+          zip -qry ../CALLSHARE-Final-unsigned.ipa Payload
+
+      - name: Upload IPA
+        uses: actions/upload-artifact@v4
+        with:
+          name: CALLSHARE-Final-unsigned
+          path: CALLSHARE-Final-unsigned.ipa

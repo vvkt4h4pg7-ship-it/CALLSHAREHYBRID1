@@ -1,0 +1,22 @@
+--- a/src/com/ugur/ikosk7v5/telephony/TelephonyBridge.java
++++ b/src/com/ugur/ikosk7v5/telephony/TelephonyBridge.java
+@@
+  private final Context c; private final Sink sink; private final TelephonyManager tm;
+  private volatile boolean ringSent=false; private volatile boolean callLive=false; private volatile String lastNumber=""; private volatile long bleAnswerArmedAt=0L; private static final long BLE_ANSWER_WINDOW_MS=8000L;
++ private volatile boolean bleOutgoingDial=false;
+@@
+     else if(state==TelephonyManager.CALL_STATE_OFFHOOK){
++    if(bleOutgoingDial){
++      bleOutgoingDial=false; callLive=true;
++      Log.d(TAG,"CALL_LISTENER OFFHOOK -> BLE OUTGOING ACTIVE");
++      sink.payload(new byte[]{Protocol.EVT_ANSWER_CALL});
++      return;
++    }
+     long armed=bleAnswerArmedAt; long age=armed==0L?-1L:System.currentTimeMillis()-armed;
+@@
+- public void make(String number){try{Intent i=new Intent(Intent.ACTION_CALL, Uri.parse("tel:"+Uri.encode(number)));i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);c.startActivity(i);Log.d(TAG,"MAKE_CALL launched: "+number);}catch(Throwable e){Log.d(TAG,"MAKE_CALL ERROR "+e);}}
++ public void make(String number){try{bleOutgoingDial=true;Intent i=new Intent(Intent.ACTION_CALL, Uri.parse("tel:"+Uri.encode(number)));i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);c.startActivity(i);Log.d(TAG,"MAKE_CALL launched: "+number+" [BLE OUTGOING GATE]");}catch(Throwable e){bleOutgoingDial=false;Log.d(TAG,"MAKE_CALL ERROR "+e);}}
+@@
+-  ringSent=false;callLive=false;lastNumber="";bleAnswerArmedAt=0L;
++  ringSent=false;callLive=false;lastNumber="";bleAnswerArmedAt=0L;bleOutgoingDial=false;
+*** End Patch

@@ -1,0 +1,78 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AAA000000000000000000101 /* J7BridgeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA000000000000000001001; };
+		AAA000000000000000000102 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA000000000000000001002; };
+		AAA000000000000000000103 /* K7Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA000000000000000001003; };
+		AAA000000000000000000104 /* BLEManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA000000000000000001004; };
+		AAA000000000000000000105 /* CallKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA000000000000000001005; };
+		AAA000000000000000000106 /* VoiceEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA000000000000000001006; };
+		AAA000000000000000000107 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA000000000000000001007; };
+		AAA000000000000000000108 /* CallRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA000000000000000001010; };
+		AAA000000000000000000109 /* ContactsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA000000000000000001011; };
+		AAA000000000000000000110 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA000000000000000001012; };
+		AAA000000000000000000111 /* WiFiTransport.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA000000000000000001013; };
+		AAA000000000000000000112 /* WiFiVoiceEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAA000000000000000001014; };
+/* End PBXBuildFile section */
+
+/* PBXFileReference section */
+		AAA000000000000000001001 /* J7BridgeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = J7BridgeApp.swift; sourceTree = "<group>"; };
+		AAA000000000000000001002 /* AppModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModel.swift; sourceTree = "<group>"; };
+		AAA000000000000000001003 /* K7Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K7Protocol.swift; sourceTree = "<group>"; };
+		AAA000000000000000001004 /* BLEManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEManager.swift; sourceTree = "<group>"; };
+		AAA000000000000000001005 /* CallKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallKitManager.swift; sourceTree = "<group>"; };
+		AAA000000000000000001006 /* VoiceEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceEngine.swift; sourceTree = "<group>"; };
+		AAA000000000000000001007 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AAA000000000000000001008 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAA000000000000000001009 /* J7Bridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = J7Bridge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAA000000000000000001010 /* CallRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallRecord.swift; sourceTree = "<group>"; };
+		AAA000000000000000001011 /* ContactsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsManager.swift; sourceTree = "<group>"; };
+		AAA000000000000000001012 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		AAA000000000000000001013 /* WiFiTransport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiTransport.swift; sourceTree = "<group>"; };
+		AAA000000000000000001014 /* WiFiVoiceEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiFiVoiceEngine.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* PBXFrameworksBuildPhase section */
+		AAA000000000000000002001 /* Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXFrameworksBuildPhase section */
+
+/* PBXGroup section */
+		AAA000000000000000003001 = {isa = PBXGroup; children = (AAA000000000000000001001,AAA000000000000000001002,AAA000000000000000001003,AAA000000000000000001004,AAA000000000000000001005,AAA000000000000000001006,AAA000000000000000001007,AAA000000000000000001008,AAA000000000000000001010,AAA000000000000000001011,AAA000000000000000001012,AAA000000000000000001013,AAA000000000000000001014); path = J7Bridge; sourceTree = "<group>"; };
+		AAA000000000000000003002 = {isa = PBXGroup; children = (AAA000000000000000003001); sourceTree = "<group>"; };
+		AAA000000000000000003003 /* Products */ = {isa = PBXGroup; children = (AAA000000000000000001009); name = Products; sourceTree = "<group>"; };
+/* End PBXGroup section */
+
+/* PBXNativeTarget section */
+		AAA000000000000000004001 /* J7Bridge */ = {isa = PBXNativeTarget; buildConfigurationList = AAA000000000000000006001; buildPhases = (AAA000000000000000002002,AAA000000000000000002001,AAA000000000000000002003); buildRules = (); dependencies = (); name = J7Bridge; productName = J7Bridge; productReference = AAA000000000000000001009; productType = "com.apple.product-type.application"; };
+/* End PBXNativeTarget section */
+
+/* PBXProject section */
+		AAA000000000000000005001 /* Project object */ = {isa = PBXProject; attributes = { LastUpgradeCheck = 1600; TargetAttributes = { AAA000000000000000004001 = { CreatedOnToolsVersion = 16.0; }; }; }; buildConfigurationList = AAA000000000000000006002; compatibilityVersion = "Xcode 3.2"; developmentRegion = en; hasScannedForEncodings = 0; knownRegions = (en,tr); mainGroup = AAA000000000000000003002; productRefGroup = AAA000000000000000003003; projectDirPath = ""; projectRoot = ""; targets = (AAA000000000000000004001); };
+/* End PBXProject section */
+
+/* PBXResourcesBuildPhase section */
+		AAA000000000000000002003 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXResourcesBuildPhase section */
+
+/* PBXSourcesBuildPhase section */
+		AAA000000000000000002002 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (AAA000000000000000000101,AAA000000000000000000102,AAA000000000000000000103,AAA000000000000000000104,AAA000000000000000000105,AAA000000000000000000106,AAA000000000000000000107,AAA000000000000000000108,AAA000000000000000000109,AAA000000000000000000110,AAA000000000000000000111,AAA000000000000000000112); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXSourcesBuildPhase section */
+
+/* XCBuildConfiguration section */
+		AAA000000000000000007001 /* Debug */ = {isa = XCBuildConfiguration; buildSettings = { PRODUCT_BUNDLE_IDENTIFIER = com.ugur.callshare; PRODUCT_NAME = J7Bridge; SWIFT_VERSION = 5.0; IPHONEOS_DEPLOYMENT_TARGET = 16.0; INFOPLIST_FILE = J7Bridge/Info.plist; TARGETED_DEVICE_FAMILY = "1"; GENERATE_INFOPLIST_FILE = NO; SDKROOT = iphoneos; SWIFT_EMIT_LOC_STRINGS = YES; }; name = Debug; };
+		AAA000000000000000007002 /* Release */ = {isa = XCBuildConfiguration; buildSettings = { PRODUCT_BUNDLE_IDENTIFIER = com.ugur.callshare; PRODUCT_NAME = J7Bridge; SWIFT_VERSION = 5.0; IPHONEOS_DEPLOYMENT_TARGET = 16.0; INFOPLIST_FILE = J7Bridge/Info.plist; TARGETED_DEVICE_FAMILY = "1"; GENERATE_INFOPLIST_FILE = NO; SDKROOT = iphoneos; SWIFT_EMIT_LOC_STRINGS = YES; }; name = Release; };
+/* End XCBuildConfiguration section */
+
+/* XCConfigurationList section */
+		AAA000000000000000006001 /* Target */ = {isa = XCConfigurationList; buildConfigurations = (AAA000000000000000007001,AAA000000000000000007002); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		AAA000000000000000006002 /* Project */ = {isa = XCConfigurationList; buildConfigurations = (AAA000000000000000007001,AAA000000000000000007002); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+/* End XCConfigurationList section */
+	};
+	rootObject = AAA000000000000000005001;
+}
+
+
